@@ -2,20 +2,15 @@ boilerplate ZIP
 ================
 
 .gitignore
-# hopefully we will have public in ignore list
+# /public is ignored
 
 package.json
-# npm package for styleguide files | styleguide.css, styleguide.js, styleguide_images/
+# npm package for styleguide files | if we can pull pre-compiled SASS, it will be better.
 
 gulpfile.js
-# 1. task to pull both styleguide.css and styleguide.js 
-#    from node_modules and copy them to `source/` and/or `public/`
-
-# 2. deploy task will create a `deploy/` folder, push to gh-pages branch and delete 'deploy/' folder
-#    this way we will not have auto-generated files committed in the master branch
-#    maybe even an optional argument to the deploy, to change the remote name 
-#    - gulp deploy = push subtree origin gh-page
-#    - gulp deploy upstream = push subtree upstream gh-page
+# maybe even an optional argument to the deploy, to change the remote name 
+# - gulp deploy = push subtree origin gh-page
+# - gulp deploy upstream = push subtree upstream gh-page
 
 source/
   static/
