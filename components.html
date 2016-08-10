@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Styleguide 2</title>
+
+        <link rel="stylesheet" href="vendor/foundation.min.css"/>
+        <link rel="stylesheet" href="vendor/slick.css"/>
+        <link rel="stylesheet" href="vendor/prism.css"/>
+        <link rel="stylesheet" href="styles/styleguide.css"/>
+        <link rel="stylesheet" href="styles/custom-styles.css"/>
+        <script src="https://use.typekit.net/mvc3cdb.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="top-bar">
+        <span class="top-bar__button js-trigger-menu">menu</span>
+        <nav class="main-menu js-target-menu main-menu--left">
+          <a href="./base-elements.html">Base Elements</a>
+          <a href="./form.html">Form</a>
+          <a href="./sections.html">Sections</a>
+          <a href="./components.html">Base Components</a>
+          <a href="./special-components.html">Special Components</a>
+        </nav>
+        <a class="top-bar__logo" href="./"><img src="images/govlab-logo-white.png" alt="The GovLab"></a>
+        <span class="top-bar__button js-trigger-menu">more_vert</span>
+        <nav class="main-menu js-target-menu main-menu--right">
+          <a href="#">Github Repository</a>
+          <a href="./sandbox.html">Sandbox</a>
+        </nav>
+      </header>
+
+        
+
+    <main role="main">
+        <!-- main content starts here -->
+        <div class="top-section top-section--purple">
+            <h1>Components</h1>
+            <h3>Buttons, sliders, tabs, etc.</h3>
+        </div>
+
+        
+
+        <div class="divider">
+            <h1>Buttons</h1>
+        </div>
+        
+        <div class="page-section">
+            <div class="row">
+                <div id="button-code-1" class="column large-12">
+                    <a href="#" class="button">Text</a>
+                    <a href="#" class="button button--purple">Text <i class="material-icons">arrow_forward</i></a>
+                    <a href="#" class="button button--teal">Learn More<i class="material-icons">add</i></a>
+                    <a href="#" class="button button--orange">Send<i class="material-icons">send</i></a>
+                    <a href="#" class="button button--blue">Confirm<i class="material-icons">check</i></a>
+                    <a href="#" class="button button--black">Delete<i class="material-icons">close</i></a>
+                    <a href="#" class="button button--icon-only button--black"><i class="material-icons">close</i></a>
+                    <!-- Modifiers: .button--purple, .button--teal, .button--orange, .button--blue, .button--black, .button--icon-only, .button--black -->
+                </div>
+            </div>
+        </div>
+        <div class="page-section page-section--black">
+            <div class="row">
+                <div id="button-code-2" class="column large-12">
+                    <a href="#" class="button">Text</a>
+                    <a href="#" class="button button--purple">Text <i class="material-icons">arrow_forward</i></a>
+                    <a href="#" class="button button--teal">Learn More<i class="material-icons">add</i></a>
+                    <a href="#" class="button button--orange">Send<i class="material-icons">send</i></a>
+                    <a href="#" class="button button--blue">Confirm<i class="material-icons">check</i></a>
+                    <a href="#" class="button button--black">Delete<i class="material-icons">close</i></a>
+                    <a href="#" class="button button--icon-only button--black"><i class="material-icons">close</i></a>
+                </div>
+            </div>
+        </div>
+        <div class="divider divider--purple">
+            <div class="row">
+                <div id="button-code-3" class="column large-12">
+                    <a href="#" class="button button--naked">Naked button <i class="material-icons">arrow_forward</i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-section">
+            <div class="row">
+                <div class="column large-12">
+                    <pre><code class="language-markup" data-markup="#button-code-1"></code></pre>
+                    <pre><code class="language-markup" data-markup="#button-code-3"></code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider">
+            <h1>Search</h1>
+        </div>
+
+        <div class="page-section">
+            <div class="row">
+                <div class="column large-12">
+                    <p>Search component.  Has js associated with it that allow it to search a site, or WP for example.  Also makes use of the overlay element.</p>
+                    <div id="search-code">
+                        <form class="search search--fixed js-target-search" action="">
+                            <input type="text">
+                            <input class="js-search-submit js-trigger-search search-trigger" type="submit" value="search">
+                        </form>
+                        <!-- .search--negative - negative color scheme for dark backgrounds -->
+                        <!-- .search--fixed - search field will be expanded by default -->
+                    </div>
+
+                    <form class="search js-target-search" action="">
+                        <input type="text">
+                        <input class="js-search-submit js-trigger-search search-trigger" type="submit" value="search">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-section page-section--black">
+            <div class="row">
+                <div class="column large-12">
+                    <form class="search search--negative search--fixed js-target-search" action="">
+                        <input type="text">
+                        <input class="js-search-submit js-trigger-search search-trigger" type="submit" value="search">
+                    </form>
+                    <!-- .search--negative - negative color scheme for dark backgrounds -->
+                    <!-- .search--fixed - fixed position -->
+
+                    <form class="search search--negative js-target-search" action="">
+                        <input type="text">
+                        <input class="js-search-submit js-trigger-search search-trigger" type="submit" value="search">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="page-section">
+            <div class="row">
+                <div class="column large-12">
+                    <pre><code class="language-markup" data-markup="#search-code"></code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider">
+            <h1>Modal</h1>
+        </div>
+
+        <div class="page-section">
+            <div class="row">
+                <div id="modal-code" class="column large-12">
+
+                    <span class="button js-open-modal">Open Modal</span>
+                    
+                    <div class="modal js-target-modal">
+                        <header class="modal__header">
+                            <i class="modal__close material-icons js-close-modal">close</i>
+                            <h1 class="modal__title">Modal title with a deceny number of characters</h1>
+                        </header>
+                        <section class="modal__content">
+                            <h2>Title for modal</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ratione, reprehenderit veniam veritatis voluptatem perferendis nulla? Sint eveniet necessitatibus vel saepe, consequuntur veritatis laborum perspiciatis, reprehenderit, esse rem aut omnis.</p>
+                            <h3>Title for modal</h3>
+                            <p>Sint eveniet necessitatibus vel saepe, consequuntur veritatis laborum perspiciatis, reprehenderit, esse rem aut omnis.</p>
+                            <h4>Title for modal</h4>
+                            <form action="">
+                                <input type="text" placeholder="Sample form">
+                                <input type="text" placeholder="Sample form">
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                                <button>Submit</button>
+                            </form>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ratione, reprehenderit veniam veritatis voluptatem perferendis nulla?</p>
+                            <h3>Title for modal</h3>
+                            <p>Sint eveniet necessitatibus vel saepe, consequuntur veritatis laborum perspiciatis, reprehenderit, esse rem aut omnis.</p>
+                            <h4>Title for modal</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ratione, reprehenderit ve
+                            <h3>Title for modal</h3>
+                            <p>Sint eveniet necessitatibus vel saepe, consequuntur veritatis laborum perspiciatis, reprehenderit, esse rem aut omnis.</p>
+                            <h4>Title for modal</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ratione, reprehenderit ve
+                        </section>
+                        <footer class="modal__controls">
+                            <a class="button js-close-modal" href="#">OK</a> <a class="button js-close-modal" href="#">Cancel</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column large-12">
+                    <pre><code class="language-markup" data-markup="#modal-code"></code></pre>
+                </div>
+            </div>
+        </div>
+
+    
+
+        <div class="divider">
+            <h1>Sticky</h1>
+        </div>
+        <div class="page-section">
+            <div class="row">
+                <div class="column large-12">
+                    <p>The sticky component is the purple panel that appears on the bottom of the page. If you closed it, just refresh the page and it will pop again.</p>
+                    <pre><code class="language-markup" data-markup="#sticky-code"></code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="sticky-code">
+            <div class="sticky js-target-sticky sticky--purple js-active">
+                <div class="row">
+                    <div class="column small-12">
+                        <i class="material-icons sticky__close js-close-sticky">close</i>
+                        <h3 class="sticky__title">This is the Sticky Panel</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, in, nobis. Repudiandae <a href="#">ipsum alias enim officiis</a> et consectetur expedita commodi nobis suscipit deleniti. Recusandae architecto minima rerum modi suscipit doloremque!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Modifiers: .sticky--error, .sticky--red, .sticky--success, .sticky--green, .sticky--alert, .sticky--orange, .sticky--purple, .sticky--blue, .sticky--teal -->
+        </div>
+
+        
+    </main>
+
+
+        <footer class='footer'>
+            <div class="row">
+                <div class="large-10 large-centered columns">
+                    <div class="row">
+                        <div class="footer__content footer--sections medium-4 column">
+                            <h2>Sections</h2>
+                            <!-- Add generated sections here -->
+                        </div>
+                        <div class="footer__content medium-4 column">
+                            <h2>Lead Supporters</h2>
+                            <a class="footer__partner-logo" href="https://www.macfound.org/" tagret="_blank"><img src="images/partners/macarthur-logo-white.png" alt="MacArthur Foundation"></a>
+                            <a class="footer__partner-logo" href="http://knightfoundation.org/" tagret="_blank"><img src="images/partners/knight-logo-white.png" alt="Knight Foundation"></a>
+                            <a class="footer__partner-logo footer__partner-logo--google" href="http://google.org/" tagret="_blank"><img src="images/partners/google-org.png" alt="Google.org"></a>
+                        </div>
+                        <div class="footer__content medium-4 column">
+                            <h2>Based at</h2>
+                            <a class="footer__partner-logo" href="http://engineering.nyu.edu/tandon" tagret="_blank"><img src="images/partners/nyu.png" alt="NYU Tandon School of Engineering - New York University"></a>
+                            <a class="footer__partner-logo footer--mit" href="https://www.media.mit.edu/" tagret="_blank"><img src="images/partners/mit-logo-white.png" alt="MIT Media Lab"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="copyright">
+            <div class="row">
+                <div class="large-10 large-centered columns">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="copyright__cc-badge" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+                    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a> <br> <a href="#">Copyright Infringement Information</a>.
+                </div>
+            </div>
+        </div>
+
+        <div id="overlay" class="js-overlay"></div>
+        <script src="./vendor/jquery-2.1.4.min.js"></script>
+        <script src="./vendor/slick.min.js"></script>
+        <script src="./vendor/prism.js"></script>
+        <script src="./scripts.js"></script>
+
+        <script>
+        // Styleguide Guide specific functions
+        $(document).ready(function () {
+            $('.language-markup').each(function () {
+                var $obj = $($(this).data('markup'));
+
+                $(this).text($obj.html());
+            });
+        }); // doc.ready
+        </script>
+    </body>
+</html>
