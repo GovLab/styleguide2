@@ -58,26 +58,25 @@
 
 .card-2 {
     @extend .card-1;
-
     &__content {
         
     }
 }
 
-// .card-3 {
-    
+.card-3 {
+    @extend .card-1;
 
-//     &__content {
-//         @extend .card-1__content;
-//         background-image: url(./images/bg-image-sample.png);
-//         background-size: cover;
-//         padding-top: 65%;
-//         background-position: center;
+    &__content {
+        @extend .card-1__content;
+        background-image: url(./images/bg-image-sample.png);
+        background-size: cover;
+        padding-top: 65%;
+        background-position: center;
 
-//         h1, h2 { background-color: rgba($black, .5); }
-//         h2 {text-transform: none;}
-//     }
-// }
+        h1, h2 { background-color: rgba($black, .5); }
+        h2 {text-transform: none;}
+    }
+}
 
 
 
