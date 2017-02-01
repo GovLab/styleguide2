@@ -25,4 +25,10 @@
     &__logo img {
         height: 100%;
     }
+
+    &--transparent {
+      background-color: rgba(black, .2);
+      position: relative;
+      z-index: 100;
+    }
 }
