@@ -1,5 +1,5 @@
-body { 
-    font-size: 16px; 
+body {
+    font-size: 16px;
     font-family: $main-font;
     line-height: 1.62;
     font-weight: 400;
@@ -13,16 +13,53 @@ body {
 p { }
 p > a { text-decoration: underline; }
 p > a:hover { text-decoration: none; }
-    
+
 a {
     text-decoration: none;
     color: currentColor;
-    
+
     &:hover {
         text-decoration: underline;
         background-color: transparent;
         color: currentColor;
     }
+}
+
+.underline {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  &:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+  }
+}
+
+.underline-thick {
+  text-decoration: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  &:hover {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+  }
+}
+
+.underline-bg {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+  }
+}
+
+.underline-bg-thick {
+  text-decoration: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  &:hover {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+  }
 }
 
 small {}
@@ -83,7 +120,7 @@ h6 {
     text-transform: uppercase;
 }
 
-@include breakpoint($medium) { 
+@include breakpoint($medium) {
     h1 { font-size: 5rem;   }
     h2 { font-size: 3.2rem; }
     h3 { font-size: 2.2rem; }
@@ -92,7 +129,7 @@ h6 {
     h6 { font-size: 1.2rem; }
 }
 
-// @include breakpoint($large) { 
+// @include breakpoint($large) {
 //     h1 { font-size: 5rem;   }
 //     h2 { font-size: 3.2rem; }
 //     h3 { font-size: 2.2rem; }
