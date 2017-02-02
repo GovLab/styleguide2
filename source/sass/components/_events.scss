@@ -1,0 +1,119 @@
+#events {
+  background-color: rgba(black, .1);
+
+  &__list-header {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  &__title {
+    border-bottom: 2px $main-color solid;
+    &:hover {
+      text-decoration: none;
+      border-bottom: 2px $main-color solid;
+    }
+  }
+  h5 {
+    margin-bottom: -10px;
+  }
+  .top-section {
+    padding-bottom: 60px;
+  }
+
+  .events-panels {
+    // text-align: center;
+    color: $gray;
+
+    h5 {
+      margin-bottom: -10px;
+    }
+
+    &__first {
+      background-color: rgba(black, .1);
+      padding: 50px;
+      padding-bottom: 50px;
+    }
+    &__second {
+      padding: 50px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.no-events {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(black, .25);
+  text-align: center;
+  margin: 0;
+  padding: 40px;
+}
+
+.result-item:hover {
+
+}
+
+// Styleguide this
+.result-item--event {
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    background-color: white;
+    cursor: pointer;
+  }
+
+  &__name {
+    font-size: 1.8rem;
+    font-weight: 100;
+    text-transform: none;
+    line-height: 1.3;
+    margin-bottom: 40px;
+    flex: 1;
+  }
+
+  &__location {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $main-color;
+  }
+}
+
+.fancy-date {
+  text-align: right;
+
+  span {
+    display: inline-block;
+    padding-left: 10px;
+    line-height: 1;
+  }
+
+  &__stack {
+    display: inline-block;
+    > span { display: block; }
+  }
+
+  &__day {
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: 100;
+    color: $main-color;
+  }
+
+  &__month {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+
+  &__weekday {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: .5;
+
+  }
+}
