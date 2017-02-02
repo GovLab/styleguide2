@@ -10,7 +10,7 @@
     background-color: lighten($black, 12);
     -webkit-flex-flow: column;
     flex-flow: column;
-
+    overflow-y: scroll;
     @include breakpoint($medium) { left: -48%; }
     @include breakpoint($large) { left: -28%; }
 
