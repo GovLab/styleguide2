@@ -40,7 +40,7 @@ $(document).ready(function () {
     }
     // Modal Click Behavior
     $('.js-open-modal').click(function () {
-        $(this).find('.js-target-modal').addClass('js-active');
+        $(this).parent().find('.js-target-modal').addClass('js-active');
         currentScroll=$(window).scrollTop();
         $(window).bind('scroll',lockscroll);
         $('#overlay').addClass('js-active');
