@@ -4,8 +4,10 @@ $small-only: screen and (max-width: 39.9375em);
 $touch: screen and (max-width: 64em);
 $medium: screen and (min-width: 40em);
 $medium-only: screen and (min-width: 40em) and (max-width: 63.9375em);
+$medium-down: (max-width 64em);
+$medium-up: (min-width 64em);
 $large: screen and (min-width: 64em);
-
+$large-up: (min-width 64.063em);
 
 // colors
 $purple: #523080;
