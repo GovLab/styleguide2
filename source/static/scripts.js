@@ -111,6 +111,7 @@ $(document).ready(function () {
         ]
     });
 
+    // TABLE SORTABLE
     // Table Search with List.js Implementation
     $('.js-open-table-search').click(function (e) {
         e.preventDefault();
@@ -159,14 +160,8 @@ $(document).ready(function () {
     });
     // Fuzzy search by specific columns
     $(".fuzzy-search").keyup(function() {
-        var searchString = "";
-        if (this.id=="item__name--input") {
-            searchString = $(this).val();
+        var searchString = $(this).val();
             itemList.fuzzySearch(searchString, ["item__name"]);
-        } else if (this.id=="item__location--input") {
-            searchString = $(this).val();
-            itemList.fuzzySearch(searchString, ["item__location"]);
-        }
     });
     // List.js search reset functions
     function searchReset() {
@@ -179,4 +174,7 @@ $(document).ready(function () {
             $(this).removeClass('table-sortable__search--active');
         });
     }
+    // END TABLE SORTABLE
+
+
 }); // doc.ready

@@ -4,7 +4,6 @@
   th:first-child, td:first-child {
     width: 50px;
   }
-
   td { padding: 15px 0; }
 
   &__head-cell {
@@ -32,11 +31,7 @@
 
     &:hover { color: $white; }
 
-    &--simple { 
-      display: inline-block; 
-      // &.js-open-table-search { 
-      // }
-    }
+    &--simple { display: inline-block; }
     &--simple:hover { background-color: rgba($black, .1); }  
   }
 
@@ -66,7 +61,7 @@
       padding: 10px 15px;
       background-color: darken($main-color, 5);
       color: $white;
-      height: 3em;
+      height: 55px;
       @include placeholder { color: $white; }
       
       &:focus { background-color: darken($main-color, 7); }
