@@ -50,7 +50,7 @@ $(document).ready(function () {
     // Prevent default on footer close
     $('footer .js-close-modal').on('click', function(e) {
       e.preventDefault();
-    })
+    });
 
     $('body').on("click", '.js-close-modal', function () {
         currentScroll=$(window).scrollTop();
@@ -110,4 +110,73 @@ $(document).ready(function () {
             }
         ]
     });
+
+    // Table Search with List.js Implementation
+    $('.js-open-table-search').click(function (e) {
+        e.preventDefault();
+        $(this).parent().siblings('.table-sortable__search').toggleClass('table-sortable__search--active');
+    });
+    // Table Search Controls: X out form
+    var searchButtons = $('.table-sortable__search').find("button[type='submit']");
+    searchButtons.on("click", function(e) {
+        e.preventDefault();
+        if ($(this).parent().hasClass("table-sortable__search--active")) {
+            $(this).parent().removeClass("table-sortable__search--active");
+        }
+        searchReset();
+    });
+
+    // Table Search Controls: Sort buttons
+    var sortClickButtons = $(".table-sortable__control > i:contains('keyboard_arrow_down')");
+    sortClickButtons.on("click", function() {
+        $(this).text() == "keyboard_arrow_down" ? $(this).text("keyboard_arrow_up") : $(this).text("keyboard_arrow_down");
+    });
+    // Table Search Controls: ESC to exit form and clear search
+    $("body").keyup(function(event) {
+        if ( event.keyCode == "27" ) {
+            $(this).parent().find('.table-sortable__search').removeClass("table-sortable__search--active");
+            searchReset();
+        }
+    });
+    // List.js Implementation with Fuzzy Search
+    var fuzzyOptions = {
+      searchClass: "fuzzy-search",
+      location: 0,
+      distance: 100,
+      threshold: 0.4,
+      multiSearch: true
+    };
+    var options = {
+        valueNames: [ {name:'item__name', attr:'data-target'}, 'item__category', 'item__date', 'item__location' ]
+    };
+    var itemList = new List('items', options);
+
+    // Target input text field when search bar is active
+    $(".js-open-table-search").on("click", function(e) {
+        $(this).addClass("table-sortable__search--active");
+       $($(this).attr('data-target')).focus();
+
+    });
+    // Fuzzy search by specific columns
+    $(".fuzzy-search").keyup(function() {
+        var searchString = "";
+        if (this.id=="item__name--input") {
+            searchString = $(this).val();
+            itemList.fuzzySearch(searchString, ["item__name"]);
+        } else if (this.id=="item__location--input") {
+            searchString = $(this).val();
+            itemList.fuzzySearch(searchString, ["item__location"]);
+        }
+    });
+    // List.js search reset functions
+    function searchReset() {
+        $(".fuzzy-search").val("");
+        clearTextSearch();
+        itemList.search();
+    }
+    function clearTextSearch() {
+        $('.table-sortable__search--active').each(function(){
+            $(this).removeClass('table-sortable__search--active');
+        });
+    }
 }); // doc.ready

@@ -269,5 +269,87 @@
         </div>
       </div>
     </div>
+
+    <div class="divider">
+      <h1>Sortable Table with List.js</h1>
+    </div>
+
+    <div class="page-section">
+      <div id="items">
+        <table class="table-sortable table-sortable--main-color">
+        <!-- .table-sortable--fixed -->
+          <thead class="item">
+            <th class="table-sortable__head-cell">&nbsp;</th>
+            <th class="table-sortable__head-cell item__name">
+              <span>Name</span>
+              <div class="table-sortable__control-group">
+                <span class="table-sortable__control table-sortable__control--simple js-open-table-search" data-target="#item__name--input"><i class="material-icons">search</i></span>
+                <span class="table-sortable__control table-sortable__control--simple sort" data-sort="item__name"><i class="material-icons">keyboard_arrow_down</i></span>
+              </div>
+              <form class="table-sortable__search ">
+                <input id="item__name--input" class="fuzzy-search" type="text" placeholder="Filter by text">
+                <button type="submit" class=""><i class="material-icons">close</i></button>
+              </form>
+            </th>
+            <th class="table-sortable__head-cell item__category">
+              <span>Category</span>
+              <div class="table-sortable__control-group">
+                <span class="table-sortable__control table-sortable__control--simple sort" data-sort="item__category"><i class="material-icons">keyboard_arrow_down</i></span>
+              </div>
+            </th>
+            <th class="table-sortable__head-cell item__date">
+              <span>Date</span>
+              <div class="table-sortable__control-group">
+                <span class="table-sortable__control table-sortable__control--simple sort" data-sort="item__date"><i class="material-icons">keyboard_arrow_down</i></span>
+              </div>
+            </th>
+            <th class="table-sortable__head-cell item__location">
+              <span>Location</span>
+              <div class="table-sortable__control-group">
+                <span class="table-sortable__control table-sortable__control--simple js-open-table-search" data-target="#item__location--input"><i class="material-icons">search</i></span>
+                <span class="table-sortable__control table-sortable__control--simple sort" data-sort="item__location"><i class="material-icons">keyboard_arrow_down</i></span>
+              </div>
+              <form class="table-sortable__search ">
+                <input id="item__location--input" class="fuzzy-search" type="text" placeholder="Filter by text">
+                <button type="submit" class=""><i class="material-icons">close</i></button>
+              </form>
+            </th>
+            <th class="table-sortable__head-cell">&nbsp;</th>
+          </thead>
+          <tbody class="list">
+            <tr class="item">
+              <td></td>
+              <td class="item__name" data-target="Colliers International"><a href="#">Colliers International</a></td>
+              <td class="item__category">Housing/Real Estate</td>
+              <td class="item__date" data-timestamp="1898">1898</td>
+              <td class="item__location">British Columbia</td>
+              <td></td>
+            </tr>
+            <tr class="item">
+              <td></td>
+              <td class="item__name" data-target="Greenowl Mobile">Greenowl Mobile</td>
+              <td class="item__category">Data/Technology</td>
+              <td class="item__date" data-timestamp="2009">2009</td>
+              <td class="item__location">Ontario</td>
+              <td></td>
+            </tr>
+            <tr class="item">
+              <td></td>
+              <td class="item__name" data-target="Hexoskin"><a href="#">Hexoskin</a></td>
+              <td class="item__category">Data/Technology, Healthcare</td>
+              <td class="item__date" data-timestamp="2006">2006</td>
+              <td class="item__location">Quebec</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+
+
+
     </main>
 {% endblock %}
