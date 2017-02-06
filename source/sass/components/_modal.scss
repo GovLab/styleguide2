@@ -12,6 +12,8 @@
     
     z-index: 11;
 
+    form { input { min-width: 100%; } }
+
     &__header {
         background-color: $main-color;
         padding: 0 0 0 45px;
@@ -41,8 +43,9 @@
 
     &__content {
         max-height: 70vh;
-        margin: 0 45px;
-        padding: 30px 0;
+        margin: 0;
+        padding: 30px 45px;
+        width: 100%; 
         overflow-y: scroll;
 
         :first-child { margin-top: 0; }
