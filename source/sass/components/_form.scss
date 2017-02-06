@@ -150,6 +150,22 @@ form,
     padding: 0 15px;
     margin-bottom: 15px;
     position: relative;
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        /* IE10+ CSS styles go here */
+        position: inherit;
+        &::before {
+            display:none;
+        }
+        select option {
+            color: #000 !important;
+        }
+    }
+    @-moz-document url-prefix() {
+        position: inherit;
+        &::before {
+            display:none;
+        }
+    }
     @extend .u-transition;
 
     &::before {
