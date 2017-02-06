@@ -297,6 +297,88 @@
         </div>
 
         <div class="divider">
+          <h1>Resources</h1>
+        </div>
+
+        <div id="resources-code">
+          <div class="resources-section">
+            <div class="row expanded collapse">
+              <div id="resources" class="columns results-container">
+                <div id="list" class="list">
+                  <div class="result-item js-open-modal">
+                    <h2 class="result-item__name">Title</h2>
+                    <p class="result-item__authors">Authors</p>
+
+                    <!-- Short Description -->
+                    <div class="result-item__short-description">
+                      <p>Short Descripton</p>
+                    </div>
+
+                    <!-- Publication -->
+                    <div class="result-item__publication">
+                      <p><span>Published in</span> Day/Month/Time</p>
+                    </div>
+
+                    <!-- Resource type -->
+                    <div class="result-item__taxonomy result-item__taxonomy--type">
+                      <span class="result-item__taxonomy__key">Type</span>
+                      <span class="result-item__taxonomy__value">
+                          <p class="result-item__tag resource-type" data-type="all">Resource Type</p>
+                      </span>
+                    </div>
+
+                    <!-- Resource theme -->
+                    <div class="result-item__taxonomy result-item__taxonomy--type">
+                      <span class="result-item__taxonomy__key">Themes</span>
+                      <span class="result-item__taxonomy__value resource-theme" data-theme="all">
+                          <p class="result-item__tag">Resource Theme</p>
+                      </span>
+                    </div>
+
+                    <!-- Modal Content -->
+                    <div class="modal js-target-modal">
+                      <header class="modal__header modal--top-section">
+                        <div class="modal__type">
+                          <span>Resource Type</span>
+                        </div>
+
+                        <i class="modal__close material-icons js-close-modal">close</i>
+                        <h1 class="modal__title">Title</h1>
+                        <h2 class="modal__authors">Authors</h2>
+                        <p class="modal__publication"><span>Published in</span> Day/Month/Time</p>
+
+                        <!-- URL -->
+                        <div class="floating-button">
+                          <div class="floating-button__wrapper">
+                            <a class="button button--floating button--black" target="_blank" href="" title="">Go to Resource</a>
+                          </div>
+                        </div>
+                      </header>
+
+                      <div class="modal__content">
+                        <!-- Short Description -->
+                        <div class="result-item__short-description">
+                          <p>Short Description</p>
+                        </div>
+                        <p>Annotation</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-section">
+            <div class="row">
+                <div class="column large-12">
+                    <pre><code class="language-markup" data-markup="#resources-code"></code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider">
             <h1>Sticky</h1>
         </div>
 
@@ -362,6 +444,7 @@
         <script src="./vendor/jquery-2.1.4.min.js"></script>
         <script src="./vendor/slick.min.js"></script>
         <script src="./vendor/prism.js"></script>
+        <script src="./vendor/list.min.js"></script>
         <script src="./scripts.js"></script>
 
         <script>
