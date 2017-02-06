@@ -9,7 +9,7 @@
     left: 50%;
     margin: 0 0 0 -35%;
     box-shadow: 0 0 10px $gray-50;
-    
+
     z-index: 11;
 
     form { input { min-width: 100%; } }
@@ -44,26 +44,79 @@
     &__content {
         max-height: 70vh;
         margin: 0;
-        padding: 30px 45px;
-        width: 100%; 
+        // padding: 30px 45px;
+        padding: 45px;
+        width: 100%;
         overflow-y: scroll;
 
-        :first-child { margin-top: 0; }
+        &:first-child { margin-top: 0; }
+
+        &:last-child {
+          padding-bottom: 60px;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+          font-weight: 400;
+        }
     }
 
     &__controls {
         padding:  10px 45px 10px 45px;
         background-color: rgba($black, .05);
         box-shadow: 0 -2px 10px rgba($black, .15);
-        
     }
 
     &__close {
       float: right;
       cursor: pointer;
     }
+
+    &__publication {
+    text-align: center;
+    color: white;
+    font-weight: 500;
+  }
+
+  &__type {
+    float: left;
+    padding: 15px 20px;
+
+    > span {
+      font-weight: 600;
+      text-transform: uppercase;
+      color: darken($main-color, 14);
+      margin-right: 8px;
+      background-color: darken($main-color, 4);
+      padding: 5px;
+    }
+  }
+
+  &--top-section {
+    background-color: $main-color;
+    padding: 0;
+
+    h1, h2 {
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+      text-transform: none;
+    }
+
+    h1 {
+      font-size: 2rem;
+      padding-top: 80px;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-top: 10px;
+      color: rgba(black, .3);
+      padding: 0 80px;
+    }
+
+  }
 }
-
-
-
-
