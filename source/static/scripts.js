@@ -176,5 +176,12 @@ $(document).ready(function () {
     }
     // END TABLE SORTABLE
 
+    // Logic for Accordion Component
+
+    $('.js-open-accordion').click(function() {
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+    });
+
 
 }); // doc.ready
