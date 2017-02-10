@@ -179,8 +179,8 @@ $(document).ready(function () {
     // Logic for Accordion Component
 
     $('.js-open-accordion').click(function() {
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
+        $(this).siblings().removeClass('js-active');
+        $(this).addClass('js-active');
     });
 
 

@@ -11,9 +11,9 @@
 
   }
 
-  .active dd { max-height: 900px; }
+  .js-active dd { max-height: 900px; }
 
-  .active dt:before { content: "expand_less"; }
+  .js-active dt:before { content: "expand_less"; }
 
   a {
     color:currentColor !important;
