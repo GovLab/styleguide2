@@ -67,6 +67,7 @@ $(document).ready(function () {
         $(window).unbind('scroll');
         $('.js-active-menu').removeClass('js-active-menu');
         $('body').removeClass('js-body-modal-active');
+
     });
 
 
@@ -176,5 +177,22 @@ $(document).ready(function () {
     }
     // END TABLE SORTABLE
 
+    // Logic for Accordion Component
+
+    var closed = true;
+
+    $('.js-open-accordion').click(function() {
+
+        if (closed) {
+            $(this).siblings().removeClass('js-active');
+            $(this).addClass('js-active');
+            closed = false;
+        }
+        else {
+            $(this).removeClass('js-active');
+            closed = true;
+        }
+
+    });
 
 }); // doc.ready

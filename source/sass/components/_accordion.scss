@@ -1,0 +1,72 @@
+.accordion {
+
+  border: 0;
+
+  &__item {
+
+    color: $white;
+    font-weight: 400;
+
+    &:nth-child(even) { background-color: $gray-20; }
+
+  }
+
+  .js-active dd { max-height: 900px; }
+
+  .js-active dt:before { content: "expand_less"; }
+
+  a {
+    color:currentColor !important;
+    text-decoration: underline !important;
+  }
+
+  ul {
+    padding: 0 5%;
+  }
+
+  p { 
+    padding: 10px 30px;
+    margin: 0;
+  }
+
+  dt {
+    font-weight: bold;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    p { margin: 0; }
+  }
+  
+  dd {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .8s ease;
+    box-sizing: border-box;
+    padding-bottom: 0;
+
+    p:last-child { margin-bottom: 20px; }
+  }
+
+
+  // Adds the arrow on the right
+  
+  dt:before {
+
+    @extend .u-material-icons;
+    color: $white-60;
+    margin: 10px 20px;
+    float: right;
+    content: "expand_more";
+
+  }
+
+
+  // Adds different bg-colours modifiers
+
+  &--purple    { background-color: $purple; }
+  &--orange    { background-color: $orange; }
+  &--blue      { background-color: $blue; }
+  &--teal      { background-color: $teal; }
+
+}
