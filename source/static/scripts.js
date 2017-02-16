@@ -67,6 +67,7 @@ $(document).ready(function () {
         $(window).unbind('scroll');
         $('.js-active-menu').removeClass('js-active-menu');
         $('body').removeClass('js-body-modal-active');
+
     });
 
 
