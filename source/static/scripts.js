@@ -179,10 +179,20 @@ $(document).ready(function () {
 
     // Logic for Accordion Component
 
-    $('.js-open-accordion').click(function() {
-        $(this).siblings().removeClass('js-active');
-        $(this).addClass('js-active');
-    });
+    var closed = true;
 
+    $('.js-open-accordion').click(function() {
+
+        if (closed) {
+            $(this).siblings().removeClass('js-active');
+            $(this).addClass('js-active');
+            closed = false;
+        }
+        else {
+            $(this).removeClass('js-active');
+            closed = true;
+        }
+
+    });
 
 }); // doc.ready
