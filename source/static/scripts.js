@@ -195,4 +195,12 @@ $(document).ready(function () {
 
     });
 
+    // Color Palette Logic
+
+    $(".palette__item h2").each(function() {
+      var color = $(this).text();
+      $(this).parent().css("background-color", color);
+      console.log(color);
+    });
+
 }); // doc.ready
