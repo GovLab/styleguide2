@@ -1,0 +1,30 @@
+### GovLab's Properties : Colors
+
+// * OGRX:
+
+//     $main-color: #004f6f;
+// 	$accent-color: #F0B300;
+
+// 	* Mapping the base colors to the category vars:
+// 		$all: #3b4f65;
+// 		$behavioral-research: #de606c;
+// 		$citizen-engagement: #5fa9d4;
+// 		$civic-technology: #a67fb9;
+// 		$data-analysis: #f3b44b;
+// 		$expert-networking: #6e7b97;
+		// $open-data: #00ad98;
+		// $labs-and-experimentation: #dbc048;
+
+
+	// $gray:      #717e81;
+	// $green:     #56a173;
+	// $orange:    #d65a43;
+	// $green2:    #607a34;
+	// $yellow:    #d9be5b;
+	// $brown:     #6a4f3b;
+	// $blue:      #3f70b6;
+	// $blue-gray: #668b98;
+	// $dark-blue: #314956;
+	// $teal:      #4b8c8e;
+	// $red:       #b33945;
+	// $purple: #523080;

@@ -1,0 +1,66 @@
+.palette {
+
+	text-align: left;
+	width: 351px;
+	margin: 0 auto;
+
+
+	&--base { 
+		width: 395px; 
+		@media only screen and (max-width: 639px) { width: 237px; }
+	}
+
+	a:hover { text-decoration: none; }
+
+	h5:after {
+		@extend .u-material-icons;
+    	color: inherit;
+    	margin: 10px 20px;
+    	content: "link";
+    	transform: rotate(-45deg);
+    	vertical-align: middle;
+    	font-size: 1.3rem;
+	}
+
+
+	&__item { 
+
+		display: inline-block;
+    	padding: 5px;
+    	width: 75px;
+    	height: 75px;
+    	overflow: hidden;
+    	position: relative;
+
+    	h1 {
+	        font-weight: bold;
+	        text-transform: uppercase;
+	        font-size: .9rem;
+	        margin: 0;
+	        padding: 5% 0;
+	        color: $white;
+    	}
+
+    	h2 { 
+	        font-weight: bold;
+	        font-size: .9rem;
+	        margin: 0;
+	        padding: 5% 0;
+	        color: $white; 
+	    }
+
+	    &--rgb { 
+
+	    	h2 { 
+	    		position: absolute; 
+	    		padding: 0px;
+	    		bottom: 5px; 
+	    		right: 5px; 
+	    	}
+
+	    	h3 { display: none; } 
+	    }
+
+	}
+
+}
