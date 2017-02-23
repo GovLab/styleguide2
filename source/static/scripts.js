@@ -197,7 +197,13 @@ $(document).ready(function () {
 
     // Color Palette Logic
 
-    $(".palette__item h2").each(function() {
+    $(".palette__item h1").each(function() {
+      var color = $(this).text();
+      $(this).parent().css("background-color", color);
+      console.log(color);
+    });
+
+    $(".palette__item--rgb h3").each(function() {
       var color = $(this).text();
       $(this).parent().css("background-color", color);
       console.log(color);

@@ -1,25 +1,52 @@
 .palette {
 
 	text-align: left;
+	width: 320px;
+	margin: 0 auto;
+
+	&--base { 
+		width: 400px; 
+	}
+
 
 	&__item { 
 
 		display: inline-block;
     	padding: 5px;
-    	// margin: 0 -4px -8px 0;
     	width: 75px;
     	height: 75px;
     	overflow: hidden;
+    	position: relative;
 
     	h1 {
 	        font-weight: bold;
+	        text-transform: uppercase;
 	        font-size: .9rem;
 	        margin: 0;
 	        padding: 5% 0;
 	        color: $white;
     	}
 
-    	h2 { display: none; }
+    	h2 { 
+	        font-weight: bold;
+	        font-size: .9rem;
+	        margin: 0;
+	        padding: 5% 0;
+	        color: $white; 
+	    }
+
+	    &--rgb { 
+
+	    	h2 { 
+	    		position: absolute; 
+	    		padding: 0px;
+	    		bottom: 5px; 
+	    		right: 5px; 
+	    	}
+
+	    	h3 { display: none; } 
+	    }
+
 	}
 
 }

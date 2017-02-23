@@ -1,106 +1,30 @@
 ### GovLab's Properties : Colors
 
+// * OGRX:
 
-<!-- * Zika:
+//     $main-color: #004f6f;
+// 	$accent-color: #F0B300;
 
-	$main-color: #2c4758;
-	$accent-color: #FFAA00;
-	$theme-color: #04ccb7; -->
-	
-
-* OGRX:
-
-	$main-color: rgba( 0,  79, 111, 1);
-	$accent-color: #F0B300;
-
-	* Mapping the base colors to the category vars:
-		$all: rgba(59,79,101,1);
-		$behavioral-research: rgba(222,96,108,1);
-		$citizen-engagement: rgba(95, 169,212,1);
-		$civic-technology: rgba(166,127,185,1);
-		$data-analysis: rgba(243,180,75,1);
-		$expert-networking: rgba(110,123,151,1);
-		$open-data: rgba(0,173,152,1);
-		$labs-and-experimentation: rgba(219,192,72,1);
+// 	* Mapping the base colors to the category vars:
+// 		$all: #3b4f65;
+// 		$behavioral-research: #de606c;
+// 		$citizen-engagement: #5fa9d4;
+// 		$civic-technology: #a67fb9;
+// 		$data-analysis: #f3b44b;
+// 		$expert-networking: #6e7b97;
+		// $open-data: #00ad98;
+		// $labs-and-experimentation: #dbc048;
 
 
-	$gray:      rgba(113, 126, 129, 1);
-	$green:     rgba( 86, 161, 115, 1);
-	$orange:    rgba(214,  90,  67, 1);
-	$green2:    rgba( 96, 122,  52, 1);
-	$yellow:    rgba(217, 190,  91, 1);
-	$brown:     rgba(106,  79,  59, 1);
-	$blue:      rgba( 63, 112, 182, 1);
-	$blue-gray: rgba(102, 139, 152, 1);
-	$dark-blue: rgba( 49,  73,  86, 1);
-	$teal:      rgba( 75, 140, 142, 1);
-	$red:       rgba(179,  57,  69, 1);
-	$purple: #523080;
-
-<!-- * ODCANADA:
-
-	$theme-purple: #483c6c;
-	$theme-pink: #fe227c;
-	$theme-green: #0cffe1;
-	$theme-yellow: #ffd489;
-	$main-color: $theme-purple;
-	$accent-color: $theme-green; -->
-
-<!-- * Collective Intelligence:
-
-	$main-color: #191b3f;
-	$accent-color: #18fce3;
-	$yellow: #ffd300; -->
-
-<!-- * Data Collaboratives:
-
-	$yellow: #e5c810;
-	$main-color: $yellow;
-	$gray: rgba(black, 0.7);
- -->
-<!-- * Open Data Symposium 2016:
-
-	$dark-blue: hsla(207, 33, 21, 1);
-	$odrs-green: hsla(187, 43, 49, 1);
-	$yellow: hsla(50, 71, 62, 1); -->
-
-<!-- * MRFP:
-
-	$mrfp-blue: #3B4E64;
-	$mrfp-green: #00C5AC;
-	$mrfp-yellow: #ECC600;
-	$mrfp-orange: #F16246;
-	$mrfp-purple: #AD6DC4;
- -->
-<!-- * Academy 2016:
-
-	$orange: #ee5b43; //main academy orange
-	$light-orange: #F47156;
-	$yellow: #f9b26f;
-	$light-yellow: #efce7c;
-	$green: #22a69b;
-	$blue: #366473; -->
-
-	
-<!-- * Data Justice:
-
-	$error-color: #f30;
-	$success-color: #4b7e4b;
-	$green: #4b7e4b;
-
-	$main-color:#151F2B; // dark-blue
-	$accent-color: #E3C729; // yellow
-	$gray: #637A84;
-	$light-gray: lighten($gray,50%);
-	$yellow: #ff9600;
-	$black: #151F2B; -->
-
-<!-- * NOI:
-
-	$main-color: #008ab3;
-	$accent-color: #ff9600;
-	$yellow: #ff9600;
-	$green: #4b7e4b;
-	$error-color: #f30;
-	$success-color: #4b7e4b; -->
-
+	// $gray:      #717e81;
+	// $green:     #56a173;
+	// $orange:    #d65a43;
+	// $green2:    #607a34;
+	// $yellow:    #d9be5b;
+	// $brown:     #6a4f3b;
+	// $blue:      #3f70b6;
+	// $blue-gray: #668b98;
+	// $dark-blue: #314956;
+	// $teal:      #4b8c8e;
+	// $red:       #b33945;
+	// $purple: #523080;
