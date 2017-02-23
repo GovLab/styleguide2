@@ -1,12 +1,25 @@
 .palette {
 
 	text-align: left;
-	width: 316px;
+	width: 351px;
 	margin: 0 auto;
+
 
 	&--base { 
 		width: 395px; 
 		@media only screen and (max-width: 639px) { width: 237px; }
+	}
+
+	a:hover { text-decoration: none; }
+
+	h5:after {
+		@extend .u-material-icons;
+    	color: inherit;
+    	margin: 10px 20px;
+    	content: "link";
+    	transform: rotate(-45deg);
+    	vertical-align: middle;
+    	font-size: 1.3rem;
 	}
 
 
