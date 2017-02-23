@@ -1,11 +1,12 @@
 .palette {
 
 	text-align: left;
-	width: 320px;
+	width: 316px;
 	margin: 0 auto;
 
 	&--base { 
-		width: 400px; 
+		width: 395px; 
+		@media only screen and (max-width: 639px) { width: 237px; }
 	}
 
 
