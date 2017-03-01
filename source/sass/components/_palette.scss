@@ -23,6 +23,16 @@
     	font-size: 1.3rem;
 	}
 
+	h5:after {
+		@extend .u-material-icons;
+    	color: inherit;
+    	margin: 10px 20px;
+    	content: "link";
+    	transform: rotate(-45deg);
+    	vertical-align: middle;
+    	font-size: 1.3rem;
+	}
+
 	#noi {
 		@media only screen and (min-width: 640px) { margin-bottom: 3.9rem; }
 	}
