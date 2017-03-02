@@ -124,7 +124,6 @@
 
     &__cc-badge {
         margin-right: 25px;
-        margin-top: 5px;
         @include breakpoint($small-only) { display: block; }
         @include breakpoint($large) { float: left; }
     }
@@ -138,4 +137,6 @@
             color: $white;
         }
     }
+
+    .row { line-height: 31px; }
 }
