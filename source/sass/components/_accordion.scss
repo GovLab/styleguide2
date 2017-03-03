@@ -13,7 +13,7 @@
 
   .js-active dd { max-height: 900px; }
 
-  .js-active dt:before { content: "expand_less"; }
+  .js-active dt:before { content: "expand_less"; cursor: pointer; }
 
   a {
     color:currentColor !important;
@@ -27,6 +27,7 @@
   p { 
     padding: 10px 30px;
     margin: 0;
+    cursor: pointer; 
   }
 
   dt {
@@ -58,6 +59,7 @@
     margin: 10px 20px;
     float: right;
     content: "expand_more";
+    cursor: pointer; 
 
   }
 

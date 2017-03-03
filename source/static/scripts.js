@@ -188,10 +188,14 @@ $(document).ready(function () {
             $(this).addClass('js-active');
             closed = false;
         }
+
         else {
             $(this).removeClass('js-active');
-            closed = true;
+            $(this).siblings().removeClass('js-active');
+            closed = true;        
         }
+
+        console.log(closed)
 
     });
 
