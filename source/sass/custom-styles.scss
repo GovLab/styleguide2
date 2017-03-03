@@ -18,21 +18,19 @@
   /* Support for IE. */ font-feature-settings: 'liga';
 }
 
+#noi-colors { @media only screen and (min-width: 640px) { margin-bottom: 3.9rem; } }
+
 .palette {
-
-  text-align: left;
-  margin: 0 auto;
-  @media only screen and (min-width: 640px) { width: 411px; }
-  @media only screen and (max-width: 639px) { width: 351px; }
-
-  #noi { @media only screen and (min-width: 640px) { margin-bottom: 3.9rem; } }
-
-  a:hover { text-decoration: none; }
 
   &--base { 
     width: 480px; 
     @media only screen and (max-width: 639px) { width: 351px; }
+    margin: 0 auto; 
+
+    .palette__item { margin-bottom: 4px; }
   }
+
+  // &__link { width: 411px; }
 
   &__link:after {
     @extend .u-material-icons;
@@ -42,6 +40,15 @@
       transform: rotate(-45deg);
       vertical-align: middle;
       font-size: 1.3rem;
+  }
+
+  &__row {
+
+    text-align: left;
+    margin: 0 auto;
+    height: 75px; 
+    margin-bottom: 4px; 
+
   }
 
 
