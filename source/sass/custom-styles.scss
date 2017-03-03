@@ -20,6 +20,10 @@
 
 #noi-colors { @media only screen and (min-width: 640px) { margin-bottom: 3.9rem; } }
 
+.sub-project {
+  font-weight: 400;
+}
+
 .palette {
 
   &--base { 
@@ -30,7 +34,7 @@
     .palette__item { margin-bottom: 4px; margin-top: -8px; }
   }
 
-  // &__link { width: 411px; }
+  &__link { max-width: 430px; }
 
   &__link:after {
     @extend .u-material-icons;
