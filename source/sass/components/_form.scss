@@ -112,6 +112,11 @@ form,
     }
 }
 
+.form--negative .select {
+  background-color: rgba(white, .1);
+  &::before { color: white; }
+}
+
 .checkbox,
 .radio {
     padding:7px 10px;
