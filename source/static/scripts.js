@@ -190,9 +190,16 @@ $(document).ready(function () {
         }
 
         else {
-            $(this).removeClass('js-active');
-            $(this).siblings().removeClass('js-active');
-            closed = true;        
+            if ($(this).is('.js-active')){
+                $(this).removeClass('js-active');
+                closed = true;   
+            }
+
+            else {
+                $(this).siblings().removeClass('js-active');
+                $(this).addClass('js-active');
+                closed = false;   
+            }     
         }
 
         console.log(closed)
