@@ -1,0 +1,65 @@
+#map-wrapper {
+
+  display: block;
+  margin: 0 auto;
+
+  svg {
+    margin: 0 auto; 
+    height: auto !important; 
+    width: auto !important; 
+    display: block;
+    min-height: 360px;
+  }
+
+  @include breakpoint ($medium) {
+    height: 360px;
+  }
+
+  @include breakpoint($small-only) {
+      display: none;
+  }
+
+  .path {
+    fill: rgba($black, .15);
+    stroke:rgba(white, .25);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    &.active {
+      fill: rgba($black, .3);
+    }
+  }
+
+  .circle { 
+    cursor: pointer; 
+    fill: $purple;
+    opacity: .8; 
+  }
+
+  .active { fill: $purple-40k; }
+
+  .number {
+    fill: rgba(white, .8);
+    font-size: 18px;
+    font-weight: 400;
+    pointer-events: none;
+  }
+
+}
+
+#caption {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+
+  .map-tooltip {   
+    color: $purple;
+    text-transform: uppercase;
+    font-weight: 600;
+    
+  }
+
+   @include breakpoint($small-only) {
+      display: none;
+  }
+}
