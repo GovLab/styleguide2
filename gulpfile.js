@@ -52,6 +52,11 @@ gulp.task('js', function () {
     .pipe(gulp.dest('public'));
 });
 
+gulp.task('json', function () {
+  return gulp.src('source/static/**/*.json')
+    .pipe(gulp.dest('public'));
+});
+
 // Nunjucks
 gulp.task('nunjucks', function () {
   nunjucksRender.nunjucks.configure(['source/templates/']);
@@ -75,7 +80,7 @@ gulp.task('push-gh-pages', function () {
 gulp.task('deploy', function (callback) {
   runSequence(
     'clean',
-    ['sass', 'js', 'image', 'nunjucks', 'vendor'],
+    ['sass', 'js', 'json', 'image', 'nunjucks', 'vendor'],
     'push-gh-master',
     'push-gh-pages',
     callback
@@ -84,6 +89,7 @@ gulp.task('deploy', function (callback) {
 
 gulp.task('watch', function () {
   gulp.watch('source/static/**/*.js', ['js']);
+  gulp.watch('source/static/**/*.json', ['json']);
   gulp.watch('source/sass/**/*.scss', ['sass']);
   gulp.watch('source/templates/**/*.html', ['nunjucks']);
   gulp.watch('source/static/vendor/**/*.js', ['vendor']);
@@ -93,7 +99,7 @@ gulp.task('watch', function () {
 gulp.task('default', function (callback) {
   runSequence(
     'clean',
-    ['sass', 'js', 'image', 'nunjucks', 'vendor'],
+    ['sass', 'js', 'json', 'image', 'nunjucks', 'vendor'],
     ['browserSync', 'watch'],
     callback
   );

@@ -213,4 +213,154 @@ $(document).ready(function () {
       console.log(color);
     });
 
+    // D3.js map 
+
+    /* Based on the Social Innovation Simulation Tutorial Available at http://socialinnovationsimulation.com/2013/07/11/tutorial-making-maps-on-d3/ */
+
+
+    var getId = function(s) {
+        return s.replace(/\W+/g, '-').toLowerCase();
+    }
+
+    // get center of element based on bounding box and root d3 object
+    // e.g. a result of d3.select('something').append() that includes the child
+    var getCenter = function(root, id) {
+        // select element
+        // debugger
+        var region = root.select('#' + id).datum();
+        // calculate bounding box
+        var b = path.bounds(region);
+        // return center [x,y]
+        return [(b[0][0] + b[1][0]) / 2, (b[0][1] + b[1][1]) / 2];
+    }
+
+    active = d3.select(null);
+
+    var width=960;
+    var height=360;
+
+    var svg = d3.select("#map-wrapper")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height)
+    ;
+
+    var path = d3.geo.path();
+    var projection = d3.geo.albersUsa()
+        .translate([width/2, height/2])
+        .scale([800]);
+
+    var path = d3.geo.path()
+        .projection(projection);
+
+
+
+    var div = d3.select("#caption")
+        .append("div")
+        .attr("class", "map-tooltip")
+        .style("opacity", 0)
+
+    d3.json("us.json", function(us) {
+        svg.selectAll("append")
+        .data(us.features)
+        .enter()
+        .append("path")
+        .attr("d", path)
+        .attr("class", "path")
+        .attr("id", function(d) {
+            return getId(d.properties.name);
+        });
+
+        d3.json("womenplus-locations.json", function(error, data) {
+            data=data.sort(function(a,b) { return b.count - a.count; })
+            svg.selectAll("circle")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("class", "circle")
+            .attr("id", function(d) { return getId(d.location);})
+            .attr("data-location", function(d) { 
+                highlightLocation(d.location);
+                return d.location;
+            })
+            .attr("cx", function(d) {
+                return getCenter(svg, getId(d.location))[0];
+            })
+            .attr("cy", function(d) {
+                return getCenter(svg, getId(d.location))[1];
+            })
+            .attr("r", function(d) {
+                return Math.sqrt(d.count)*15;
+            })
+
+            .on("mouseover", function(d) {
+                div.transition()
+                .duration(200)
+                .style("opacity", 1)
+                if (d.count==1) {
+                    div.html(d.location + " | " + d.count + " expert")
+                }
+                else {
+                    div.html(d.location + " | " + d.count + " experts")
+                }
+                d3.select(this)
+                .transition()
+                .delay(0)
+                .duration(750)
+                .attr("r", function(d) {
+                    return Math.sqrt(d.count) * 20;
+                })
+            })
+
+            .on("mouseout", function(d) {
+                div.transition()
+                .duration(500)
+                .style("opacity", 0)
+                d3.select(this)
+                .transition()
+                .duration(750)
+                .attr("r", function(d) {
+                    return Math.sqrt(d.count) * 15;
+                })
+            })
+
+            .on("click", clicked)
+
+            function clicked() {
+                if (active.node() === this) return reset();
+                active.classed("active", false);
+                active = d3.select(this).classed("active", true);
+            }
+
+            function reset() {
+                active.classed("active", false);
+                active = d3.select(null);
+            }
+
+            // If you don't want the numbers, comment out from here...
+
+            svg.selectAll("text")
+            .data(data)
+            .enter()
+            .append("text")
+            .attr("x", function(d) {
+                return getCenter(svg, getId((d.location)))[0];
+            })
+            .attr("y", function(d) {
+                return getCenter(svg, getId((d.location)))[1];
+            })
+            .attr("text-anchor", "middle")
+            .attr("dy", "6")
+            .text(function(d) { return d.count; })
+            .attr("class", "number");
+
+            // ...till here
+
+        });
+    });
+
+    function highlightLocation(state) {
+        d3.select('path#' + getId(state)).classed('active', true);
+    }
+
 }); // doc.ready
