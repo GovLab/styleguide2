@@ -402,7 +402,7 @@
       <div class="row">
         <div class="column large-12">
           <p>The map component uses a custom D3.js script. The script makes it easy to represent discrete numerical data per geographic region.</p>
-          <p>The script targets two div elements:</p>
+          <p>The script targets <b>two div elements</b>:</p>
           <pre><code class="language-markup">
               &lt;div id="map-wrapper"&gt;
                 &lt;!-- The map overlayed with circular elements --&gt;
@@ -413,11 +413,11 @@
           </code></pre>
           <p>The script is dependent on two files:</p>
           <ol>
-            <li>A topojson/geojson file. This file is used to create the base map;</li>
-            <li>A csv/json file with discrete values corresponding to the specific features of the base map (counties, states, provinces, etc.). This file is used to create circular elements over the base map and the labels-captions on hover. The features targeted in this file need to exist in the topojson/geojson file and follow the same naming convention. If the topojson/geojson does not contain certain features, they cannot be targeted.</li>
+            <li>A <b>topojson/geojson</b> file. This file is used to create the base map;</li>
+            <li>A <b>csv/json</b> file with discrete values corresponding to the specific features of the base map (counties, states, provinces, etc.). This file is used to create circular elements over the base map and the labels-captions on hover. The features targeted in this file need to exist in the topojson/geojson file and follow the same naming convention. If the topojson/geojson does not contain certain features, they cannot be targeted.</li>
           </ol>
           <p>The files used to create the above example can be found in the <i>static</i> folder.</p>
-          <p>The styling of the map component is not dependent on the D3.js script and can be changed using CSS.</p>
+          <p>The styling of the map component is <b>independent</b> of the D3.js script and can be changed using custom CSS.</p>
         </div>
       </div>
     </div>
